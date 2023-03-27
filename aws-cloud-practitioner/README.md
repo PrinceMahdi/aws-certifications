@@ -252,3 +252,78 @@
 - **You want to protect your Root Accounts and IAM users**
 - MFA = password you know + security device you own
 - Main benefits of MFA: if a password is stolen or hacked, the account is not compromised
+
+### MFA Device Options in AWS
+
+- Virtual MFA device (e.g. Google Authenticator)
+- Universal 2nd Factor (U2F) Security Key (e.g. YubiKey by Yubico )
+- Hardware Key Fob MFA Device provided by Gemalto
+- Hardware Key Fob MFA Device for AWS GovCloud provided by SurePassID
+
+### How can users access AWS?
+
+- To access AWS, you have 3 options:
+  - AWS management Console (protected by password + MFA)
+  - AWS COmmand Line Interface (CLI): protected by access keys
+  - AWS Software Developer Kit (SDK) - for code: protected by access keys
+- Access keys are generated through the AWS Console
+- Users manage their own access keys
+- Access keys are secret, just like a password. **Don't share them.**
+
+### What is AWS CLI?
+
+- It's a tool that enables you to interact with AWS services using commands in your command-line shell
+- Direct access to the public APIs of AWS services
+- You can develop scripts to manage your resources
+- It's open-source
+- Alternative to using AWS Management Console
+
+### What's the AWS SDK?
+
+- AWS Software Development Kit
+- Language-specific APIs (set of libraries)
+- Enables you to access and manage AWS services programmatically
+- Embedded within your application
+- Supports:
+  - SDKs (JavaScript, Python, PHP, .NET, Ruby, Java, Go, Node.js, C++)
+  - Mobile SDKs (Android, iOS)
+  - IoT Device SDKs (Embedded C, Arduino)
+- AWS CLI is build on AWS SDK for Python
+
+### IAM: Roles For Services
+
+- Some AWS service will need to perform actions on your behalf
+- To do so, we will assign permissions to AWS services with IAM roles
+
+### IAM: Security Tools
+
+- **IAM Credentials Report (account-level)**
+  - It's a report that lists all your account's users and the status of their various Credentials
+- **IAM Acceess Advisor (user-level)**
+  - Access advisor shows the service permissions granted to a user and when those services were last accessed
+  - You can use this information to revise your policies
+
+### IAM: Guidelines & Best Practices
+
+- Don't use the root account except for AWS account setup
+- One physical user = one AWS user
+- **Assign users to groups** and assign permissions to groups
+- Create a **strong passwrod policy**
+- Use and enforce the user of **Multi Factor Authentication (MFA)**
+- Create and use **roles** for giving permissions to AWS services
+- Use Access Keys for Programmatic Access (CLI/SDK)
+- Audit permissions of your account using IAM Credentials Report & IAM Access Advisor
+- Never share IAM users & Access Keys
+
+### Shared Responsibility Model for IAM
+
+- **AWS:**
+  - Infrastructure (global network security)
+  - COnfiguration and vulnerablity analysis
+  - Compliance validation
+- **You:**
+  - Users, Groups, Roles, Policies management and monitoring
+  - Enable MFA on all Accounts
+  - Rotate all your keys often
+  - Use IAM tools to apply appropriate permissions
+  - Analyze access patterns & review permissions
