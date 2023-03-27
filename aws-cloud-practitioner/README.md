@@ -79,6 +79,15 @@
 - **Increase speed and agility**
 - **Stop spending money running and maintaining data centers**
 
+### Problems Solved By the Cloud
+
+- **Flexibility:** change resource types when needed
+- **Cost-Effectiveness:** pay as you go, for what you use
+- **Scalability:** Accommodate larger loads by making hardware stronger or adding additional nodes
+- **Elasticity:** Ability to scale out and scale-in when needed
+- **High-availability & Fault-tolerance:** build across data centers
+- **Agility:** rapidly develop, test, and launch software applications
+
 ### Types of Cloud Computing
 
 - **Infrastructure as a Service (IaaS):**
@@ -134,3 +143,78 @@
   - **Data transfer OUT of the cloud:**
     - Data transfer **IN** is free
   - Solves the expensive issue of traditional IT
+
+### AWS Cloud Use Cases
+
+- Enterprise IT, Backup & Storage, Big Data analytics
+- Website hosting, Mobile & Social Apps
+- Gaming
+
+### AWS Global Infrastructure
+
+- **AWS Regions:**
+  - AWS has regions all around the world
+  - Names can be **us-east-1**, **eu-west-3**
+  - A region is a cluster of data centers
+  - Most AWS services are region-scoped
+  - **How to choose an AWS region?**
+    - **Compliance with data governance and legal requirements:** data never leaves a region without your explicit permission
+    - **Proximity to customers:** reduced latency
+    - **Available services within a region:** new services and new features aren't available in every region
+    - **Pricing** varies from region to region and is transparent in the service pricing page
+- **AWS Availability Zones:**
+  - Each region has many availability zones, usually 3, min is 3, and max is 6.
+  - For example, we have a region called **us-west-1**, the availability zones would be:
+    - us-west-1**a**
+    - us-west-1**b**
+    - us-west-1**c**
+  - Each AZ is one or more discrete data center with redundant power, networking, and connectivity
+  - They're seprate from each other, so that they're isolated from disasters
+  - They're connected with high bandwidth, ultra-low latency networking
+- **AWS Points of Presence (Edge Locations):**
+  - Amazon has around 216 Points of Presence (205 Edge Locations & 11 Regional Caches) in 84 countries across 42 countries
+  - Content is delivered to end users with low-latency
+
+### Shared Responsibility Model Diagram
+
+- **Customer** = Responsibility for the security **IN** the cloud
+  - Customer data
+  - Platform, Applications, Identity & Access Management
+  - Operating System, Network & Firewall Configurations
+  - Client-side data encryption & data integrity authentication
+  - Server-side encryption (file system and/or data)
+  - Networking traffic protection (encryption, integrity, identity)
+- **AWS** = Responsibility for the security **OF** the cloud
+  - Software
+    - Compute
+    - Storage
+    - database
+    - Networking
+  - Hardware / AWS Global Infrastructure
+    - Regions
+    - Availability Zones
+    - Edge Locations
+
+<br>
+<br>
+
+### AWS Acceptable Use Policy
+
+- No illegal, harmful, or offensive use or Content
+- No security violations
+- No network abuse
+- No E-mail or other message abuse
+
+## IAM: Users & Groups
+
+- IAM = Identity and Access Management (**Global** Service)
+- **Root account** created by default, shouldn't be used or shared
+- **Users** are people within your organization, and can be grouped
+- **Groups** only contain users, not other Groups
+- Users don't have to belong to a group, and a user can belong to multiple groups
+
+### IAM: Permissions
+
+- **Users and Groups** can be assigned JSON documents called policies
+- These policies define the **permissions** of the users
+- In AWS you apply the **least priviledge principle:** don't give more permission than a user needs
