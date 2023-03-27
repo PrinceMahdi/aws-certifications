@@ -18,4 +18,4 @@ Additionally, you may find it helpful to use the search function within GitHub t
 
 If you would like to contribute to this repository, please feel free to submit a pull request. Contributions may include corrections, additions, or updates to existing notes, or the addition of notes for a new certification. Please ensure that all contributions are original work and are properly cited if sourced from external materials.
 
-~Thank you for using this repo as a resource in your studies!~
+Thank you for using this repo as a resource in your studies!
