@@ -203,7 +203,6 @@
 - No E-mail or other message abuse
 
 <br>
-<br>
 
 ## IAM: Users & Groups
 
@@ -218,3 +217,38 @@
 - **Users and Groups** can be assigned JSON documents called policies
 - These policies define the **permissions** of the users
 - In AWS you apply the **least priviledge principle:** don't give more permission than a user needs
+
+### IAM: Policies Structure
+
+- Consists of:
+  - **Version:** Policy language version, always include "2012-10-17"
+  - **ID:** An identifier for the policy (optional)
+  - **Statement:** One or more individual statements (required)
+- Statements consist of:
+  - **Sid:** An identifier for the statement (optional)
+  - **Effect:** Whether the statement allows or denies access (Allow, Deny)
+  - **Principal:** Account/user/role to which this policy is applied to
+  - **Action:** A list of actions this policy allows or denies
+  - **Resources:** A list of resources to which the actions applied to
+  - **Conditions** for when this policy is in effect (optional)
+
+### IAM: Password Policy
+
+- Strong passwords = higher security for your account
+- You can setup a password policy:
+  - Set a minimum password length
+  - Require specific character types:
+    - Including uppsercase letters
+    - Lowecase letters
+    - Numbers
+    - Non-alphanumeric characters
+  - Allows all IAM users to change their own passwords
+  - Require users to change their password after some time
+  - Prevent password re-use
+
+### Multi Factor Authentication - MFA
+
+- Users have access to your account and can possibly change configurations or delete resources in your AWS account
+- **You want to protect your Root Accounts and IAM users**
+- MFA = password you know + security device you own
+- Main benefits of MFA: if a password is stolen or hacked, the account is not compromised
