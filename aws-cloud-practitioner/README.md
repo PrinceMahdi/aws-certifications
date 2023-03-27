@@ -195,15 +195,15 @@
     - Availability Zones
     - Edge Locations
 
-<br>
-<br>
-
 ### AWS Acceptable Use Policy
 
 - No illegal, harmful, or offensive use or Content
 - No security violations
 - No network abuse
 - No E-mail or other message abuse
+
+<br>
+<br>
 
 ## IAM: Users & Groups
 
