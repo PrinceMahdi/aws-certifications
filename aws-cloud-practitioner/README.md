@@ -1,5 +1,7 @@
 # AWS Cloud Practitioner (CLF-C01)
 
+#### : : : Notes taken from **Stephane Maarek's** course on Udemy : : :
+
 ### IT Terminology
 
 - **Network:** cables, routers, and servers connected with each other
@@ -526,3 +528,28 @@
 - The most expensive option
 - Useful for software that has a complicated licensing model (BYOL - bring your own license)
 - Or for companies that have strong regulatory or compliance needs
+
+### EC2: Dedicated Instances
+
+- Instances run on hardware that's dedicated to you
+- May share hardware with other instances in same account
+- No control over instance placement (can move hardware after Stop/Start)
+
+### EC2: Capacity Reservations
+
+- Reserve **On-Demand** instances capacity in a specific AZ for any duration
+- You have access to EC2 capacity when you need it
+- **No time commitment** (create/cancel anytime), **no billing discounts**
+- Combine with regional reserved instances and savings plan to benefit from billing discounts
+- You're charged at on-demand rate whether you run instances or not
+- Suitable for short-term, uninterrupted workloads that needs to be in a specific AZ
+
+### Which purchasing option is right for me?
+
+- Let's take an example of a resort:
+  - **On demand:** coming and staying in resort whenever we like, we pay the full price
+  - **Reserved:** like planning ahead and if we plan to stay for a long time, we may get a good discount
+  - **Savings Plans:** pay a certain amount per hour for certain period and stay in any room type (King, Suite, Sea View)
+  - **Spot Instances:** The resort allows people to bid for the empty rooms and the highest bider keeps the rooms. You can get kicked out at any time
+  - **Dedicated Hosts:** We book an entire building of the resort
+  - **Capacity Reservations:** You book a room for a period with full price even you don't stay in it
