@@ -447,9 +447,9 @@
 
 ### SSH Overview
 
-|               | SSH   | Putty | EC2 Instance Connect |
-| ------------- | ----- | ----- | -------------------- |
-| Mac           | - [x] | - []  | - [x]                |
-| Linux         | - [x] | - []  | - [x]                |
-| Windows < 10  | - []  | - [x] | - [x]                |
-| Windows >= 10 | - [x] | - [x] | - [x]                |
+|               | SSH                                      | Putty                                    | EC2 Instance Connect                     |
+| ------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| Mac           | <input type="checkbox" checked disabled> | <input type="checkbox" disabled>         | <input type="checkbox" checked disabled> |
+| Linux         | <input type="checkbox" checked disabled> | <input type="checkbox" disabled>         | <input type="checkbox" checked disabled> |
+| Windows < 10  | <input type="checkbox" disabled>         | <input type="checkbox" checked disabled> | <input type="checkbox" checked disabled> |
+| Windows >= 10 | <input type="checkbox" checked disabled> | <input type="checkbox" checked disabled> | <input type="checkbox" checked disabled> |
