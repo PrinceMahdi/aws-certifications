@@ -327,3 +327,87 @@
   - Rotate all your keys often
   - Use IAM tools to apply appropriate permissions
   - Analyze access patterns & review permissions
+
+<br>
+
+## EC2 (Elastic Compute Cloud)
+
+- EC2 is one of the most popular of AWS' offering
+- EC2 is an IaaS
+- It mainly consists in the capability of:
+  - Renting virtual machines (EC2)
+  - Storing data on virtual drives (EBS)
+  - Distributing load across machines (ELB)
+  - Scaling the services using an auto-scaling group (ASG)
+- Knowing EC2 is essential to understanding how the Cloud works
+
+### EC2: Sizing & Configuration Options
+
+- **Operating System (OS):** Linux, Windows, or Mac OS
+- How much compute power & cores **(CPU)**
+- How much random-access memory **(RAM)**
+- How much storage space:
+  - Network-attached (EBS & EFS)
+  - Hardware (EC2 Instance Store)
+- Network card: Speed of the card, public IP address
+- Firewall rules: **security group**
+- Bootstrap script (configure at first launch): EC2 User Data
+
+### EC2: User Data
+
+- It is possible to bootstrap our instsances using an **EC2 User Data** script
+- **Bootstraping** means launching commands when a machine starts
+- That script is **only run once** at the instance **first start**
+- EC2 user data is used to automate boot tasks such as:
+  - Installing updates
+  - Installing software
+  - Downloading common files from the internet
+  - Anything you can think of
+- The EC2 User Data Script runs with the root user
+
+### EC2: Instance types
+
+- You can use different types of EC2 instances that are optimised for different use Cases (https://aws.amazon.com/ec2/instance-types/)
+- AWS has the following naming convention:
+  - m5.2xlarge
+  - **m:** instance class
+  - **5:** generation of the instance(AWS improves them over time)
+  - **2xlarge:** size within the instance class
+
+### EC2: Instance types - General Purpose
+
+- Great for a diversity of workloads such as web servers or code repositories
+- Balance between:
+  - Compute
+  - memory
+  - Networking
+- The **t2.micro** is a general purpose EC2 instance
+
+### EC2: Instance types - Compute Optimized
+
+- Great for compute-intensive tasks that require high performance processors:
+  - Batch processing workloads
+  - Media transcoding
+  - High performance web servers
+  - High performance computing (HPC)
+  - Scientific modeling & Machine Learning
+  - Dedicated gaming servers
+
+### EC2: Instance types - Memory Optimized
+
+- Fast performance for workloads that process large data sets in memory
+- Use cases:
+  - High performance, relational/non-relational databses
+  - Distribtued web scale cache stores
+  - In-memory databases optimized for BI (Business Intelligence)
+  - Applications performing real-time processing of big unstructred data
+
+### EC2: Instance types - Storage Optimized
+
+- Great for storage-intensive tasks that require high, sequential read and write access to large data sets on local storage
+- Use cases:
+  - High frequency online transaction processing (OLTP) systems
+  - Relational & NoSQL databases
+  - Cache for in-memory databases (for example, Redis)
+  - Data warehousing applications
+  - Distributed file systems
