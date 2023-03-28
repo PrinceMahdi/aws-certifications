@@ -4,7 +4,7 @@
 
 - **Network:** cables, routers, and servers connected with each other
 - **Router:** A networking device that forwards data packets between computer networks. They know where to send your packets on the internet!
-- **Switch:** Takes a packet and send it to the correct server / client on your network
+- **Switch:** Takes a packet and sends it to the correct server/client on your network
 
 ### Problems With the Traditional IT Approach
 
@@ -12,7 +12,7 @@
 - Pay for power supply, cooling, and maintenance
 - Adding and replacing hardware takes time
 - Scaling is limited
-- Hire 24/7 team to monitor the infrastructure
+- Hire a 24/7 team to monitor the infrastructure
 - How to deal with disasters? (earthquake, power shutdown, etc.)
 
 ### What is Cloud Computing?
@@ -27,7 +27,7 @@
 
 - **Gmail**
   - E-mail cloud service
-  - Pay for ONLY your emails stored (no infrastrucutre, etc)
+  - Pay for ONLY your emails stored (no infrastructure, etc)
 - **Dropbox**
   - Cloud Storage service
   - Originally built on AWS
@@ -46,13 +46,13 @@
   - Cloud resources owned and operated by a third-party cloud service provider delivered over the internet
   - Six advantages of Cloud Computing
 - **Hybrid Cloud:**
-  - Keep some servers on premises and extend some capabilities to the cloud
+  - Keep some servers on-premises and extend some capabilities to the cloud
   - Control over sensitive assets in your private infrastructure
   - Flexibility and cost-effectiveness of the public cloud
 
 ### The 5 Characteristics of Cloud Computing
 
-- **On-demand self service:**
+- **On-demand self-service:**
   - Users can provision resources and use them without human interaction from the service provider
 - **Broad network access:**
   - Resources available over the network, and can be accessed by diverse client platforms
@@ -60,7 +60,7 @@
   - Multiple customers can share the same infrastructure and applications with security and privacy
   - Multiple customers are serviced from the same physical resources
 - **Rapid elasticity and scalability:**
-  - Automatically and quickly acquire and dispose resources when needed
+  - Automatically and quickly acquire and dispose of resources when needed
   - Quickly and easily scale based on demand
 - **Measured service:**
   - Usage is measured, users pay correctly for what they have used
@@ -84,7 +84,7 @@
 - **Flexibility:** change resource types when needed
 - **Cost-Effectiveness:** pay as you go, for what you use
 - **Scalability:** Accommodate larger loads by making hardware stronger or adding additional nodes
-- **Elasticity:** Ability to scale out and scale-in when needed
+- **Elasticity:** Ability to scale out and scale in when needed
 - **High-availability & Fault-tolerance:** build across data centers
 - **Agility:** rapidly develop, test, and launch software applications
 
@@ -128,7 +128,7 @@
   - GCP, Azure, Rackspace, Digital Ocean, Linode
 - **PaaS:**
   - Elastic Beanstalk (On AWS)
-  - Heroku, Google App Engine, Windwos Azure (Microsoft)
+  - Heroku, Google App Engine, Windows Azure (Microsoft)
 - **SaaS:**
   - Many AWS services such as **Rekognition for Machine Learning**
   - Google Apps (Gmail), Dropbox, Zoom
@@ -137,7 +137,7 @@
 
 - AWS has 3 pricing fundamentals, following the pay-as-you-go pricing model:
   - **Compute:**
-    - Pay for compute time
+    - Pay for computing time
   - **Storage:**
     - Pay for data stored in the cloud
   - **Data transfer OUT of the cloud:**
@@ -146,7 +146,7 @@
 
 ### AWS Cloud Use Cases
 
-- Enterprise IT, Backup & Storage, Big Data analytics
+- Enterprise IT, Backup & Storage, Big Data Analytics
 - Website hosting, Mobile & Social Apps
 - Gaming
 
@@ -161,15 +161,15 @@
     - **Compliance with data governance and legal requirements:** data never leaves a region without your explicit permission
     - **Proximity to customers:** reduced latency
     - **Available services within a region:** new services and new features aren't available in every region
-    - **Pricing** varies from region to region and is transparent in the service pricing page
+    - **Pricing** varies from region to region and is transparent on the service pricing page
 - **AWS Availability Zones:**
   - Each region has many availability zones, usually 3, min is 3, and max is 6.
   - For example, we have a region called **us-west-1**, the availability zones would be:
     - us-west-1**a**
     - us-west-1**b**
     - us-west-1**c**
-  - Each AZ is one or more discrete data center with redundant power, networking, and connectivity
-  - They're seprate from each other, so that they're isolated from disasters
+  - Each AZ is one or more discrete data centers with redundant power, networking, and connectivity
+  - They're separate from each other so that they're isolated from disasters
   - They're connected with high bandwidth, ultra-low latency networking
 - **AWS Points of Presence (Edge Locations):**
   - Amazon has around 216 Points of Presence (205 Edge Locations & 11 Regional Caches) in 84 countries across 42 countries
@@ -188,7 +188,7 @@
   - Software
     - Compute
     - Storage
-    - database
+    - Database
     - Networking
   - Hardware / AWS Global Infrastructure
     - Regions
@@ -197,7 +197,7 @@
 
 ### AWS Acceptable Use Policy
 
-- No illegal, harmful, or offensive use or Content
+- No illegal, harmful, or offensive use of Content
 - No security violations
 - No network abuse
 - No E-mail or other message abuse
@@ -216,7 +216,7 @@
 
 - **Users and Groups** can be assigned JSON documents called policies
 - These policies define the **permissions** of the users
-- In AWS you apply the **least priviledge principle:** don't give more permission than a user needs
+- In AWS you apply the **least privilege principle:** don't give more permission than a user needs
 
 ### IAM: Policies Structure
 
@@ -235,20 +235,20 @@
 ### IAM: Password Policy
 
 - Strong passwords = higher security for your account
-- You can setup a password policy:
+- You can set up a password policy:
   - Set a minimum password length
   - Require specific character types:
-    - Including uppsercase letters
-    - Lowecase letters
+    - Including uppercase letters
+    - Lowercase letters
     - Numbers
     - Non-alphanumeric characters
   - Allows all IAM users to change their own passwords
   - Require users to change their password after some time
   - Prevent password re-use
 
-### Multi Factor Authentication - MFA
+### Multi-Factor Authentication - MFA
 
-- Users have access to your account and can possibly change configurations or delete resources in your AWS account
+- Users have access to your account and can change configurations or delete resources in your AWS account
 - **You want to protect your Root Accounts and IAM users**
 - MFA = password you know + security device you own
 - Main benefits of MFA: if a password is stolen or hacked, the account is not compromised
@@ -263,11 +263,11 @@
 ### How can users access AWS?
 
 - To access AWS, you have 3 options:
-  - AWS management Console (protected by password + MFA)
-  - AWS COmmand Line Interface (CLI): protected by access keys
+  - AWS Management Console (protected by password + MFA)
+  - AWS Command Line Interface (CLI): protected by access keys
   - AWS Software Developer Kit (SDK) - for code: protected by access keys
 - Access keys are generated through the AWS Console
-- Users manage their own access keys
+- Users manage their access keys
 - Access keys are secret, just like a password. **Don't share them.**
 
 ### What is AWS CLI?
@@ -288,53 +288,53 @@
   - SDKs (JavaScript, Python, PHP, .NET, Ruby, Java, Go, Node.js, C++)
   - Mobile SDKs (Android, iOS)
   - IoT Device SDKs (Embedded C, Arduino)
-- AWS CLI is build on AWS SDK for Python
+- AWS CLI is built on AWS SDK for Python
 
 ### IAM: Roles For Services
 
-- Some AWS service will need to perform actions on your behalf
+- Some AWS services will need to perform actions on your behalf
 - To do so, we will assign permissions to AWS services with IAM roles
 
 ### IAM: Security Tools
 
 - **IAM Credentials Report (account-level)**
   - It's a report that lists all your account's users and the status of their various Credentials
-- **IAM Acceess Advisor (user-level)**
+- **IAM Access Advisor (user-level)**
   - Access advisor shows the service permissions granted to a user and when those services were last accessed
   - You can use this information to revise your policies
 
 ### IAM: Guidelines & Best Practices
 
-- Don't use the root account except for AWS account setup
+- Don't use the root account except for the AWS account setup
 - One physical user = one AWS user
 - **Assign users to groups** and assign permissions to groups
-- Create a **strong passwrod policy**
-- Use and enforce the user of **Multi Factor Authentication (MFA)**
+- Create a **strong password policy**
+- Use and enforce the user of **Multi-Factor Authentication (MFA)**
 - Create and use **roles** for giving permissions to AWS services
 - Use Access Keys for Programmatic Access (CLI/SDK)
-- Audit permissions of your account using IAM Credentials Report & IAM Access Advisor
+- Audit permissions of your account using the IAM Credentials Report & IAM Access Advisor
 - Never share IAM users & Access Keys
 
 ### Shared Responsibility Model for IAM
 
 - **AWS:**
   - Infrastructure (global network security)
-  - COnfiguration and vulnerablity analysis
+  - Configuration and vulnerability analysis
   - Compliance validation
 - **You:**
-  - Users, Groups, Roles, Policies management and monitoring
+  - Users, Groups, Roles, Policies management, and monitoring
   - Enable MFA on all Accounts
   - Rotate all your keys often
-  - Use IAM tools to apply appropriate permissions
+  - Use IAM tools to apply for appropriate permissions
   - Analyze access patterns & review permissions
 
 <br>
 
 ## EC2 (Elastic Compute Cloud)
 
-- EC2 is one of the most popular of AWS' offering
+- EC2 is one of the most popular AWS' offering
 - EC2 is an IaaS
-- It mainly consists in the capability of:
+- It mainly consists of the capability of:
   - Renting virtual machines (EC2)
   - Storing data on virtual drives (EBS)
   - Distributing load across machines (ELB)
@@ -355,7 +355,7 @@
 
 ### EC2: User Data
 
-- It is possible to bootstrap our instsances using an **EC2 User Data** script
+- It is possible to bootstrap our instances using an **EC2 User Data** script
 - **Bootstraping** means launching commands when a machine starts
 - That script is **only run once** at the instance **first start**
 - EC2 user data is used to automate boot tasks such as:
@@ -379,17 +379,17 @@
 - Great for a diversity of workloads such as web servers or code repositories
 - Balance between:
   - Compute
-  - memory
+  - Memory
   - Networking
 - The **t2.micro** is a general purpose EC2 instance
 
 ### EC2: Instance types - Compute Optimized
 
-- Great for compute-intensive tasks that require high performance processors:
+- Great for compute-intensive tasks that require high-performance processors:
   - Batch processing workloads
   - Media transcoding
-  - High performance web servers
-  - High performance computing (HPC)
+  - High-performance web servers
+  - High-performance computing (HPC)
   - Scientific modeling & Machine Learning
   - Dedicated gaming servers
 
@@ -397,16 +397,16 @@
 
 - Fast performance for workloads that process large data sets in memory
 - Use cases:
-  - High performance, relational/non-relational databses
-  - Distribtued web scale cache stores
+  - High-performance, relational/non-relational databases
+  - Distributed web-scale cache stores
   - In-memory databases optimized for BI (Business Intelligence)
-  - Applications performing real-time processing of big unstructred data
+  - Applications performing real-time processing of big unstructured data
 
 ### EC2: Instance types - Storage Optimized
 
 - Great for storage-intensive tasks that require high, sequential read and write access to large data sets on local storage
 - Use cases:
-  - High frequency online transaction processing (OLTP) systems
+  - High-frequency online transaction processing (OLTP) systems
   - Relational & NoSQL databases
   - Cache for in-memory databases (for example, Redis)
   - Data warehousing applications
@@ -414,7 +414,7 @@
 
 ### Security Groups & Classic Ports
 
-- Security Groups are the fundamental of network security in AWS
+- Security Groups are fundamental to network security in AWS
 - They control how traffic is allowed into or out of our EC2 instances
 - Security groups only contain **allow** rules
 - Security groups rules can reference by IP or by security group
@@ -423,7 +423,7 @@
   - Access to Ports
   - Authorised IP ranges - IPv4 and IPv6
   - Control of inbound network (from other to the instance)
-  - Control of outbount network (from the instance to other)
+  - Control of outbound network (from the instance to other)
 
 ### Security Groups (The Good to Knows)
 
@@ -434,7 +434,7 @@
 - If your application is not accessible **(time out)**, then it's a security group issue
 - If your application gives a **"connection refused"** error, then it's an application error or it's not launched
 - All inbound traffic is **blocked** by default
-- All outbound traffic is **authorised** by defualt
+- All outbound traffic is **authorised** by default
 
 ### Classic Ports to Knowing
 
@@ -453,3 +453,76 @@
 | Linux         | &#9745; | &#9744; | &#9745;              |
 | Windows < 10  | &#9744; | &#9745; | &#9745;              |
 | Windows >= 10 | &#9745; | &#9745; | &#9745;              |
+
+- SSH is one of the most important functions. It allows you to control a remote machine, all using the command line
+
+### EC2: Instances Purchasing Options
+
+- **On-demand instances:** short workload, predictable pricing, pay by second
+- **Reserved (1 & 3 years)**:
+  - Reserved Instances - long workloads
+  - Convertible Reserved Instances - long workloads with flexible instances
+- **Savings Plan (1 & 3 years)** - commitment to an amount of usage, long workload
+- **Spot Instances:** short workloads, cheap, can lose instances (less reliable)
+- **Dedicated Hosts:** book an entire physical server, control instance placement
+- **Dedicated Instances:** no other customers will share your hardware
+
+**(The discount % in the following section changes frequently and they aren't essential to passing the AWS Cloud Practitioner Exam)**
+
+### EC2: On Demand
+
+- Pay for what you use:
+  - Linux or Windows - billing per second, after the first minute
+  - All other operating systems - billing per hour
+- Has the highest cost but no upfront payment
+- No long-term commitment
+- Recommended for **short-term** and **un-interrupted workloads**, where you can't predict how the application will behave
+
+### EC2: Reserved Instances
+
+- Up to 72% discount compared to On-demand
+- You reserve specific instance attributes (Instance Type, Region, Tenancy, OS)
+- **Reservation Period** - **1 year** (+discount) or 3 years (+++discount)
+- **Payment options** - No Upfront (+), Partial Upfront (++), All Upfront (+++)
+- **Reserved Instance's Scope** - Regional or Zonal (reserve capacity in an AZ)
+- Recommended for steady-state usage applications (think database)
+- You can buy and sell in the reserved instance marketplace
+- **Convertible Reserved Instance**
+  - Can change the EC2 instance type, instance family, OS, scope, and tenancy
+
+### EC2: Savings Plan
+
+- Get a discount based on long-term usage (up to 72% - same as RIs)
+- Commit to a certain type of usage ($10/hour for 1 or 3 years)
+- Usage beyond the EC2 savings plan is billed at the on-demand Prices
+- Locked to specific instance family & AWS region
+- Flexible across:
+  - Instance size
+  - OS
+  - Tenancy (Host, Dedicated, Default)
+
+### EC2: Spot Instances
+
+- Can get a discount of up to 90% compared to on-demand
+- Instances that you can "lose" at any point in time if your max price is less than the current spot price
+- The **MOST cost-efficient** instances in AWS
+- **Useful for workloads that are resilient to failure**
+
+  - Batch jobs
+  - Data analysis
+  - Image processing
+  - Any **distributed** workloads
+  - Workloads with a flexible start and end time
+
+- **NOT suitable for critical jobs or databases**
+
+### EC2: Dedicated Hosts
+
+- A physical server with EC2 instance capacity fully dedicated to your use
+- Allows you to address **compliance requirements** and **use your existing server-bound software licenses** (per-socket, per-core, per-VM software licenses)
+- Purchasing options:
+  - **On-demand** - pay per second for active Dedicated Host
+  - **Reserved** - 1 or 3 years (no upfront, partial upfront, all upfront)
+- The most expensive option
+- Useful for software that has a complicated licensing model (BYOL - bring your own license)
+- Or for companies that have strong regulatory or compliance needs
