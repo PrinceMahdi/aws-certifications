@@ -553,3 +553,42 @@
   - **Spot Instances:** The resort allows people to bid for the empty rooms and the highest bider keeps the rooms. You can get kicked out at any time
   - **Dedicated Hosts:** We book an entire building of the resort
   - **Capacity Reservations:** You book a room for a period with full price even you don't stay in it
+
+### What's an EBS Volume?
+
+- An **EBS (Elastic Block Store) Volume** is a **network** drive you can attach to your instances while they run
+- It allows your instances to persist data, even after their termination
+- **They can only be mountaed to one instance at a time** (at the Certified Cloud Practitioner level)
+- They are bound to a specific availability zone
+- Think of them as a "network USB stick"
+- Free tier: 30 GB of free EBS storage of type Genera Purpose (SSD) or Magnetic per month
+
+### EBS Volume
+
+- It's a network drive (not a physical drive)
+  - It uses the network to communicate the instance, which means there might be a bit of latency
+  - It can be detached from an EC2 instance and attached to antoher one quickly
+- It's locked to an Availability Zone
+  - An EBS volume in us-east-1a cannot be attached to us-east-1b
+  - To move a volume across, you first need to snapshot it
+- Have a provisioned capacity (size in GBs, and IOPS)
+
+### EBS Delete on Termination Attribute
+
+- By default, it's ticked for the root volume and not ticked for the new EBS volume
+- Controls the EBS behaviour when an EC2 instance terminates
+- This can be controlled by the AWS console/AWS CLI
+- **User case:** preserve root volume when instance is terminated
+
+### EBS Snapshots
+
+- Make a backup (snapshot) of your EBS volume at a point in time
+- Not necessary to detach volume ot do snapshot, but recommended
+- Can copy snapshots across AZ or Region
+- Features:
+  - **EBS Snapshots Archive**
+    - Move a snapshot to an "archive tier" that is 75% cheaper
+    - Takes within 24 to 72 hours for restoring the archive
+  - Recycle Bin for EBS snapshots
+    - Setup rules to retain deleted snapshots so you can recover them after an accidental deletion
+    - Specify retention (from 1 day to 1 year)
