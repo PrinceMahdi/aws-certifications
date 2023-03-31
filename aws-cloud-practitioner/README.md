@@ -592,3 +592,20 @@
   - Recycle Bin for EBS snapshots
     - Setup rules to retain deleted snapshots so you can recover them after an accidental deletion
     - Specify retention (from 1 day to 1 year)
+
+### AMI Overview (Amazon Machine Image)
+
+- AMIs are a customization of an EC2 instance
+  - You add your own software, configuration, OS, monitoring, etc.
+  - Faster boot / configuration time because everything is pre-packaged
+- AMIs are built for a **specific region** (and can be copied across regions)
+- You can launch EC2 instances from:
+  - A Public AMI: (AWS provided)
+  - **Your own AMI:** You make and maintain them yourself
+  - **An AWS Marketplace AMI:** An AMI someone else made (and potentially sells)
+
+### AMI Process (From an EC2 Instance)
+
+- Start an EC2 instance and customize it
+- Stop the instance (for data integrity)
+- Build an AMI - this will also create EBS snapshots
