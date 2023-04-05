@@ -610,3 +610,4 @@
 - Stop the instance (for data integrity)
 - Build an AMI - this will also create EBS snapshots
 
+
